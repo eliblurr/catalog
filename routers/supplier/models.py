@@ -10,5 +10,3 @@ class Supplier(Base):
     location = Column(String, nullable=True)
     gender = Column(String, nullable=True)
     
-Base.metadata.create_all(bind=engine)
-    
