@@ -1,4 +1,5 @@
 from sqlalchemy import Column, String, Float, Integer, Enum
+from sqlalchemy.orm import relationship
 from database import Base, engine
 
 class Supplier(Base):
@@ -9,4 +10,5 @@ class Supplier(Base):
     phone = Column(String, nullable=True)
     location = Column(String, nullable=True)
     gender = Column(String, nullable=True)
+    products = relationship("Product", back_populates="supplier")
     
